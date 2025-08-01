@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>New Blog</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+    <div class="container">
+        <h2>Create New Blog</h2>
+        <form method="POST" action="/blogs" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Blog Title" required><br>
+            <textarea name="content" placeholder="Blog Content" rows="10" required></textarea><br>
+            <input type="file" name="image" accept="image/*"><br>
+            <button type="submit">Post</button>
+        </form>
+    </div>
+</body>
+</html>

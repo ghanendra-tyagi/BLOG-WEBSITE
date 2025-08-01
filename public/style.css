@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: hsl(21, 99%, 33%);
+}
+
+.navbar {
+    background: #cb9819;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgb(69, 245, 230);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #030202;
+    border-radius: 5px;
+    
+}
+
+button {
+    background: #1e6862;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 3px solid black;
+
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog-card {
+    background: rgb(111, 237, 178);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.blog-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background: rgb(240, 121, 145);
+    color: rgb(241, 181, 78);
+    border: 2px solid black;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Blogs</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>Blog Website</h1>
+    <% if (currentUser) { %>
+      <a href="/blogs/new">New Blog</a>
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+    <% } %>
+  </div>
+
+  <div class="blog-container">
+    <% blogs.forEach(blog => { %>
+      <div class="blog-card">
+        <h2><%= blog.title %></h2>
+        
+        <% if (blog.image) { %>
+          <img src="<%= blog.image %>" alt="Blog Image" class="blog-image" />
+        <% } %>
+        
+        <p><%= blog.content %></p>
+        <small><%= blog.createdAt.toDateString() %></small>
+
+        <% if (currentUser) { %>
+          <form method="POST" action="/blogs/<%= blog._id %>/delete">
+            <button type="submit" class="delete-btn">Delete</button>
+          </form>
+        <% } %>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
